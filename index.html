@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello, World!</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      font: 1rem/1.5 system-ui, sans-serif;
+      color: #172035;
+      background: #f3f6fa;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: .75rem;
+      padding: 1rem clamp(.75rem, 4vw, 3rem);
+      background: white;
+      border-bottom: 1px solid #d7deea;
+    }
+    header img { display: block; width: min(100%, 9rem); }
+    h1 { margin: 0; font-size: clamp(1rem, 4vw, 1.5rem); }
+    main { display: grid; place-items: center; padding: 1.25rem; }
+    section {
+      width: min(100%, 34rem);
+      padding: clamp(1.25rem, 5vw, 3.5rem);
+      border: 1px solid #d7deea;
+      border-radius: 1rem;
+      background: white;
+      text-align: center;
+    }
+    h2 { margin: 0; font-size: clamp(2rem, 7vw, 4rem); line-height: 1.1; }
+    p { margin: 1.25rem 0; }
+    time { display: block; font-weight: 650; }
+    button {
+      padding: .6rem 1rem;
+      border: 0;
+      border-radius: .5rem;
+      color: white;
+      background: #173d80;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { background: #102e63; }
+    footer { padding: 1rem; text-align: center; border-top: 1px solid #d7deea; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://mospolytech.ru/upload/medialibrary/5fa/Logo_Polytech_rus_main.jpg"
+         alt="Московский Политех">
+    <h1>«Hello, World!»</h1>
+  </header>
+  <main>
+    <section aria-labelledby="greeting">
+      <h2 id="greeting">Hello, World!</h2>
+      <p>Время формирования страницы по Москве
+        <time datetime="{{datetime}}">{{time}}</time>
+      </p>
+      <form action="/" method="get">
+        <button type="submit">Обновить время</button>
+      </form>
+    </section>
+  </main>
+  <footer>задание для самостоятельной работы</footer>
+</body>
+</html>
