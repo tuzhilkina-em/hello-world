@@ -1,0 +1,10 @@
+{
+  "name": "tuzhilkina-em/web-practice",
+  "description": "Учебный блог по серверной веб-разработке",
+  "require": {
+    "php": ">=8.1",
+    "ext-pdo_sqlite": "*",
+    "ext-mbstring": "*",
+    "flightphp/core": "3.19.5"
+  }
+}
